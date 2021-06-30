@@ -71,17 +71,7 @@ resource azurerm_network_security_group "bad_sg" {
   name                = "terragoat-${var.environment}"
   resource_group_name = azurerm_resource_group.example.name
 
-  security_rule {
-    access                     = "Allow"
-    direction                  = "Inbound"
-    name                       = "AllowSSH"
-    priority                   = 200
-    protocol                   = "TCP"
-    source_address_prefix      = "*"
-    source_port_range          = "*"
-    destination_port_range     = "22-22"
-    destination_address_prefix = "*"
-  }
+  
 
   security_rule {
     access                     = "Allow"
