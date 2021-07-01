@@ -123,3 +123,4 @@ resource azurerm_network_watcher_flow_log "flow_log" {
     days    = 10
   }
 }
+
