@@ -43,7 +43,6 @@ resource "azurerm_network_interface" "ni_linux" {
     yor_trace            = "2647f099-dff8-4514-8cef-96159380c02a"
   }
 }
-
 resource "azurerm_network_interface" "ni_win" {
   name                = "terragoat-win-${var.environment}"
   location            = azurerm_resource_group.example.location
