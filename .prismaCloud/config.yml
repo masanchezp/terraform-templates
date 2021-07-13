@@ -1,6 +1,8 @@
 # Please update with the respective environment values and commit
 # to master branch under the .github folder before performing scans
 
+template-type: "TF"
+
 # Define the failure criteria for creating checks. If the criteria 
 # matches a check will be created. The template for the checks can 
 # becustomized in the "/.github/prisma-template-for-scan-results" 
@@ -28,5 +30,3 @@ github_asset_name: "Github Asset Dev"
 tags:
 - phase:testing
 - env:QA
-
-template-type: 'TF'
