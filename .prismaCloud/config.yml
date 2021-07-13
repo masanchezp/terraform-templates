@@ -1,7 +1,7 @@
 # Please update with the respective environment values and commit
 # to master branch under the .github folder before performing scans
 
-template-type: "TF"
+template-type: TF
 
 # Define the failure criteria for creating checks. If the criteria 
 # matches a check will be created. The template for the checks can 
