@@ -1,32 +1,29 @@
-# Please update with the respective environment values and commit
-# to master branch under the .github folder before performing scans
+# This is the configuration file for Iac Scan APIv2.
 
-template-type: TF
+# Specify the template types.The valid values are TF, CFT, K8S
+template_type: TF
 
-# Define the failure criteria for creating checks. If the criteria 
-# matches a check will be created. The template for the checks can 
-# becustomized in the "/.github/prisma-template-for-scan-results" 
-# file.
-failure_criteria_for_creating_checks:
-  high: 1
-  medium: 1
-  low: 1
-  operator: or
+# For Terraform, it is recommended to provide one of the following values: 0.11, 0.12 or 0.13.
+# For CFT and K8s, this can be omitted.
+template_version: 0.12
 
-# Define the failure criteria for creating issues. If the criteria 
-# matches an issue will be created. The template for issues can be 
-# customized in the "/.github/prisma-template-for-scan-results" 
-# file.
-failure_criteria_for_creating_issues:
-  high: 1
-  medium: 1
-  low: 1
-  operator: or
+# For your template_type, fill in the details where applicable.
+# variables: Specify any environment variables(TF) or parameters(CFT) as key:value pairs under this attribute.
+# variable_files: Specify all the custom variable_files under here. It is an array of strings.
+# variable_files: If it is standard extension(.tfvars for terraform), then this can be omitted.
+# variable_files: For a custom extension, specify the variable file path from the root of the repo.
+#template_parameters:
+#  variable_files:
+#  - './TF/tf12_variable_files/smelks.tfvars'
+#  - './TF/tf12_nested_variable_files/network/smelks.tfvars'
+#  variables:
+#    cidr: 0.0.0.0/0
+#    acl: public-read-write
+#    AccessControl: PublicRead
 
-# Define github asset name
-github_asset_name: "Github Asset Dev"
-
-# Define tags
+# Define tags to identify your particular scan. You can use these tags to search the scan details on the Prisma Cloud.
 tags:
-- phase:testing
-- env:QA
+  Org:  Engineering
+  Team: Shift_Left
+  Env: Dev
+					
