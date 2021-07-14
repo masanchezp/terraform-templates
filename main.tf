@@ -65,7 +65,6 @@ resource "azurerm_network_interface" "ni_win" {
     yor_trace            = "2b5dbf28-04fb-4151-a637-a731bbe7ed1d"
   }
 }
-
 resource azurerm_network_security_group "bad_sg" {
   location            = var.location
   name                = "terragoat-${var.environment}"
