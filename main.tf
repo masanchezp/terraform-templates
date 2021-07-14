@@ -93,7 +93,6 @@ resource azurerm_network_security_group "bad_sg" {
     yor_trace            = "1a591ba4-d969-4572-9704-87b5c55c0ba3"
   }
 }
-
 resource azurerm_network_watcher "network_watcher" {
   location            = var.location
   name                = "terragoat-network-watcher-${var.environment}"
