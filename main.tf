@@ -14,7 +14,6 @@ resource "azurerm_virtual_network" "example" {
     yor_trace            = "eb19f165-9c21-4a7a-96e5-5bb557a38228"
   }
 }
-
 resource "azurerm_subnet" "example" {
   name                 = "terragoat-${var.environment}"
   resource_group_name  = azurerm_resource_group.example.name
