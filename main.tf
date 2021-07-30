@@ -21,7 +21,6 @@ resource "azurerm_subnet" "example" {
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.0.0/24"]
 }
-
 resource "azurerm_network_interface" "ni_linux" {
   name                = "terragoat-linux-${var.environment}"
   location            = azurerm_resource_group.example.location
